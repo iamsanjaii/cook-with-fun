@@ -126,6 +126,8 @@ body {
   .container {
     width: 100%;
   }
+  .content .square{
+    margin: 5px;
 }
 .content .square {
   display: flex;
