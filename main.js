@@ -1,3 +1,5 @@
+const HighlightColor = "#66fcf1";
+
 document.addEventListener("DOMContentLoaded", function () {
   var typed = new Typed(".auto", {
     strings: ["to", "Cook with Fun 2.0"],
@@ -6,17 +8,56 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: true,
   });
 });
-const GiveRecipe = document.getElementById("recipe-btn");
-// GiveRecipe.addEventListener("click", function () {
-//   console.log("Hello World");
-// });
-GiveRecipe.addEventListener("click", function () {
-  var typed = new Typed(".recipe-tutorial", {
-    strings: [
-      "To make refreshing lemon juice, start by rolling and juicing 4 large lemons to yield about 1 cup of juice, straining out seeds and pulp if desired. Dissolve 1 cup of granulated sugar in 1 cup of hot water to create a simple syrup. Combine the lemon juice and simple syrup in a pitcher, then add 4 cups of cold water, adjusting sweetness to taste. Serve over ice, optionally garnished with fresh mint leaves, and refrigerate for an hour if you prefer it chilled. This recipe yields 6-8 servings of homemade lemon juice.",
-    ],
-    typeSpeed: 50,
-    // backSpeed: null,
-    loop: false,
+
+let selectedIngredients = new Set();
+
+const ingredients = document.querySelectorAll(".square");
+
+ingredients.forEach((i) => {
+  i.addEventListener("click", () => {
+    const ingName = i.querySelector("p").textContent.trim();
+
+    if (selectedIngredients.has(ingName)) {
+      i.style.backgroundColor = "";
+      i.style.color = "";
+      selectedIngredients.delete(ingName);
+    } else {
+      i.style.backgroundColor = HighlightColor;
+      i.style.color = "black";
+      selectedIngredients.add(ingName);
+    }
+
+    setTimeout(() => {
+      i.style.backgroundColor = "";
+      i.style.color = "";
+    }, 8000);
   });
+});
+
+const GiveRecipe = document.getElementById("recipe-btn");
+GiveRecipe.addEventListener("click", function () {
+  let newRecipe;
+  for (const i in recipes) {
+    const recipe = recipes[i];
+    const recipeIng = recipe.ingredients;
+    if (recipeIng.every((ingredient) => selectedIngredients.has(ingredient))) {
+      newRecipe = recipe;
+      break;
+    }
+  }
+  if (newRecipe) {
+    var typed = new Typed(".recipe-tutorial", {
+      strings: [newRecipe.instructions],
+      typeSpeed: 50,
+      loop: false,
+      onComplete: function () {
+        console.log(selectedIngredients);
+        selectedIngredients.clear();
+        console.log(selectedIngredients);
+      },
+    });
+  } else {
+    alert("No Recipe ḥas been found ");
+    return true;
+  }
 });

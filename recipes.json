@@ -1,0 +1,20 @@
+const recipes = {
+    "Coffee": {
+      "ingredients": ["Coffee", "Sugar", "Milk", "Water"],
+      "instructions": "To make a simple cup of coffee, start by boiling water. In a mug, add a teaspoon of your favorite coffee powder. Pour the hot water into the mug, stirring well to dissolve the coffee. Add sugar and milk to taste, if desired. Allow the flavors to blend for a minute or two before enjoying your freshly brewed coffee. Adjust sweetness and creaminess according to your preference."
+    },
+    "Maggie": {
+      "ingredients": ["Maggie", "Water"],
+      "instructions": "To make plain Maggi noodles, start by bringing 1 1/2 cups of water to a boil in a medium-sized pan. Once the water is boiling, add the Maggi noodles along with the tastemaker (seasoning) that comes with the pack. Stir occasionally and cook the noodles for 2-3 minutes until they are soft and the water is mostly absorbed. Once the noodles are cooked, turn off the heat and serve hot. Enjoy your plain and delicious Maggi noodles!"
+    },
+    "WaterMelon Juice":{
+        "ingredients":["Water Melon", "Sugar", "Ice Cubes","Water"],
+        "instructions": "To make refreshing watermelon juice, start by cutting a seedless watermelon into small cubes, totaling about 4 cups. If desired, add a tablespoon of freshly squeezed lemon juice for a tangy twist. Place the watermelon cubes into a blender and blend until smooth. For a smoother consistency, strain the juice through a fine mesh sieve or cheesecloth. Serve the juice over ice cubes for a cool refreshment. Garnish with a slice of watermelon or a sprig of mint for an added touch. This hydrating and naturally sweet beverage is perfect for hot summer days or anytime you need a refreshing drink. Enjoy the vibrant flavor of freshly made watermelon juice!"
+    },
+    "Lemon Juice":{
+        "ingredients":["Lemon", "Sugar", "Ice Cubes","Water"],
+        "instructions": "To prepare delicious lemon juice, start by juicing 2-3 large lemons, yielding approximately 1/2 cup of fresh lemon juice. Roll the lemons on a countertop to soften them before cutting and juicing to extract as much juice as possible. In a pitcher, combine the freshly squeezed lemon juice with 2 cups of cold water. If you prefer a sweeter taste, stir in sugar or honey to your liking, ensuring it dissolves completely. Chill the lemonade in the refrigerator for at least 30 minutes to enhance its refreshing qualities. When ready to serve, pour the chilled lemon juice into glasses filled with ice cubes for extra chill. Optionally, garnish each glass with a slice of lemon or a sprig of mint for added visual appeal. Enjoy this revitalizing and tangy homemade lemon juice on a hot day or whenever you crave a refreshing beverage."
+    }
+  };
+
+  

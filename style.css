@@ -58,7 +58,8 @@ body {
 .recipe {
   border: 3px solid #66fcf1;
   margin: 20px;
-  width: 35%;
+  width: 100%;
+  max-width: 400px;
   height: 50vh;
   border-radius: 8px;
   padding: 14px;
@@ -121,7 +122,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
 .content .square {
   display: flex;
   flex-wrap: wrap;
