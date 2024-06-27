@@ -47,7 +47,13 @@ GiveRecipe.addEventListener("click", function () {
   }
   if (newRecipe) {
     var typed = new Typed(".recipe-tutorial", {
-      strings: [newRecipe.instructions],
+      strings: [
+        "Ingredients Required :" +
+          newRecipe.ingredients +
+          "\nRecipe:" +
+          "\n" +
+          newRecipe.instructions,
+      ],
       typeSpeed: 50,
       loop: false,
       onComplete: function () {

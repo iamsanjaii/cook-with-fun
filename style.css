@@ -126,9 +126,13 @@ body {
   .container {
     width: 100%;
   }
-  .content .square{
-    margin: 5px;
+  .content .square {
+    margin: 2px;
+    height: 50px;
+    width: 50px;
+  }
 }
+
 .content .square {
   display: flex;
   flex-wrap: wrap;
